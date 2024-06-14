@@ -1,14 +1,16 @@
 import time
 import matplotlib.pyplot as plt
 
-DEVICE_FILE = "/dev/gpio_driver_test"
+DEVICE_FILE = "/dev/gpio_driver_sc"
 
+# Function to read the GPIO signal
 def read_gpio_signal():
     with open(DEVICE_FILE, 'r') as file:
         lines = file.read().strip().split('\n')
     signal = int(lines[0].split(': ')[1])
     return signal
 
+# Function to select the GPIO signal
 def select_signal(signal):
     with open(DEVICE_FILE, 'w') as file:
         file.write("{}".format(signal))

@@ -6,8 +6,8 @@
 #include <linux/gpio.h>
 #include <linux/timer.h>
 
-#define DEVICE_NAME "gpio_driver_test"
-#define CLASS_NAME "gpio_test"
+#define DEVICE_NAME "gpio_driver_sc"
+#define CLASS_NAME "gpio_sc"
 #define GPIO_PIN1 20
 #define GPIO_PIN2 21
 #define TIMER_INTERVAL HZ  // 1 second
